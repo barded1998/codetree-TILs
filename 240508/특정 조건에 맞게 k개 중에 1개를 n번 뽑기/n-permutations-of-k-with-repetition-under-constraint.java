@@ -28,21 +28,22 @@ public class Main {
         }
         for(int i = 1; i <=K; i++){
             if(con(arr, idx, i)){
-            cnt[i]++;
-            arr[idx] = i;
-            go(arr,idx+1);
-            cnt[i]--;
+                arr[idx] = i;
+                go(arr,idx+1);
             }
         }
     }
 
     static boolean con(int[] arr, int idx, int n){
         int cnt = 0;
-        for(int i =0; i < idx;i++){
-            if(arr[i] == n){
+        if(idx-1 >= 0){
+            if(arr[idx-1] == n)
                 cnt++;
-            }
         }
-        return cnt <3;
+        if(idx-2 >= 0){
+            if(arr[idx-2] == n)
+                cnt++;
+        }
+        return cnt < 2;
     }
 }

@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main {
 	
-	static int n, m, k = -1;
+	static int n, m, k = 0;
     static int[] arr;
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

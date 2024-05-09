@@ -17,10 +17,12 @@ public class Main {
 		int sum = 0;
 		int end = 0;
 		for(int start = 0; start < n; start++){
-			while(end < n && sum + arr[end] <= s){
+			while(end < n && sum < s){
 				sum += arr[end++];
 			}
-			min = Math.min(min, end-start+1);
+			// System.out.println(sum);
+			if(sum >= s)
+				min = Math.min(min, end-start);
 			sum -= arr[start];
 		}
 

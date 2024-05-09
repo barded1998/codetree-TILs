@@ -17,7 +17,7 @@ public class Main {
 			arr[i] = Integer.parseInt(br.readLine());
 		}
 
-		int start =0, end = 100_001;
+		int start =1, end = 100_001;
 		while(start <= end) {
 			int mid = (start + end) / 2;
 			if(calc(mid) >= m){
